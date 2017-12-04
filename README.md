@@ -22,8 +22,53 @@ Society of Tomorrow will require the following for comprehensive implementation:
 
 ### Wireframes
 
+![wireframes](https://raw.githubusercontent.com/tocarevmax/Society-of-Tomorrow/master/docs/wireframes/main.png)
+
 ### Architecture and Technologies
+
+Society of Tomorrow will be implemented using the following technologies:
+
+- Vanilla JavaScript for main structure and data parsing,
+- `JQuery` for fetching API data through AJAX requests,
+- `D3.js` for DOM manipulation and rendering,
+- `Webpack` to bundle up JavaScript file tree.
 
 ### Implementation Timeline
 
+**Over the weekend**:
+
+- [x] Conceptualizing, wireframes and planning.
+- [x] Choosing appropriate technologies.
+- [x] Obtaining API key at U.S. Census Bureau.
+- [x] Writing and testing required AJAX requests.
+- [x] Overview and intro to D3.js
+
+**Day 1**: Setup and study Intro to D3.
+
+- [ ] Complete Intro to D3 workshop.
+- [ ] Setup basic file-structure: index.html, `webpack.config.js`, `package.json`.
+- [ ] Start developing chart.
+
+**Day 2**: Deep dive into D3
+
+- [ ] Plot and map chart.
+- [ ] Get core functionality of the graph working.
+
+**Day 3**: Animation
+
+- [ ] Slider.
+- [ ] Re-rendering.
+- [ ] Play, pause, reset, back, forward.
+
+**Day 4**: Country search
+
+- [ ] Review and improve work done on days 2 & 3.
+- [ ] Auto-complete search field.
+- [ ] Polishing
+
 ### Bonus features
+
+There is a number of exciting future development opportunities that this project presents:
+
+- [ ] Separate _Total population_ chart demonstrating increase/decline of total population over decades.
+- [ ] Animated comparison of population distribution of the largest countries in the world for a year of interest.
