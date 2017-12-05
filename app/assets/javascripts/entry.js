@@ -4,7 +4,7 @@ import {extractGender} from './util/selectors.js';
 import drawChart from './charts/agegroup';
 
 
-fetchPopulationByCountryYear('US', 2030)
+fetchPopulationByCountryYear('CD', 2000)
   .then((res) => {
     let parsed = parseData(res);
     let males = extractGender(parsed, 'M');

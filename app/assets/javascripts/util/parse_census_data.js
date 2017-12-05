@@ -10,7 +10,6 @@ const convertArrToPojo = (arr) => {
     }
   }
 
-  console.log(pojo);
   return pojo;
 };
 
@@ -44,13 +43,81 @@ const calcPercent = (pojo) => {
     }
   }
 
+  console.log(resPojo);
+  return resPojo;
+};
+
+const group85plus = (pojo) => {
+  const keys = Object.keys(pojo);
+  const resPojo = Object.assign(pojo);
+
+  const FPOP85_ =
+      resPojo['FPOP85_89'] +
+      resPojo['FPOP90_94'] +
+      resPojo['FPOP95_99'] +
+      resPojo['FPOP100_'];
+
+  const MPOP85_ =
+      resPojo['MPOP85_89'] +
+      resPojo['MPOP90_94'] +
+      resPojo['MPOP95_99'] +
+      resPojo['MPOP100_'];
+
+  const TPOP85_ = FPOP85_ + MPOP85_;
+
+  const FPOP85_p = parseFloat((
+      resPojo['FPOP85_89p'] +
+      resPojo['FPOP90_94p'] +
+      resPojo['FPOP95_99p'] +
+      resPojo['FPOP100_p']
+    ).toFixed(3));
+
+  const MPOP85_p = parseFloat((
+      resPojo['MPOP85_89p'] +
+      resPojo['MPOP90_94p'] +
+      resPojo['MPOP95_99p'] +
+      resPojo['MPOP100_p']
+    ).toFixed(3));
+
+  const TPOP85_p = FPOP85_p + MPOP85_p;
+
+
+  resPojo['FPOP85_'] = FPOP85_;
+  resPojo['FPOP85_p'] = FPOP85_p;
+  resPojo['MPOP85_'] = MPOP85_;
+  resPojo['MPOP85_p'] = MPOP85_p;
+  resPojo['TPOP85_'] = TPOP85_;
+  resPojo['TPOP85_p'] = TPOP85_p;
+
+  delete resPojo['FPOP85_89'];
+  delete resPojo['FPOP90_94'];
+  delete resPojo['FPOP95_99'];
+  delete resPojo['FPOP100_'];
+
+  delete resPojo['MPOP85_89'];
+  delete resPojo['MPOP90_94'];
+  delete resPojo['MPOP95_99'];
+  delete resPojo['MPOP100_'];
+
+  delete resPojo['FPOP85_89p'];
+  delete resPojo['FPOP90_94p'];
+  delete resPojo['FPOP95_99p'];
+  delete resPojo['FPOP100_p'];
+
+  delete resPojo['MPOP85_89p'];
+  delete resPojo['MPOP90_94p'];
+  delete resPojo['MPOP95_99p'];
+  delete resPojo['MPOP100_p'];
+
   return resPojo;
 };
 
 export default (arr) => {
-  return calcPercent(
-    addTotalPopAge(
-      convertArrToPojo(arr)
+  return group85plus(
+    calcPercent(
+      addTotalPopAge(
+        convertArrToPojo(arr)
+      )
     )
   );
 };
