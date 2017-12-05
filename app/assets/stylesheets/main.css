@@ -8,19 +8,19 @@ body {
   justify-content: center;
 }
 
-.chart {
+/*.chart {
   width: 400px;
   height: 600px;
-}
+}*/
 
-.males, .females {
+/*.males, .females {
   flex-direction: column;
   width: 200px;
-}
+}*/
 
-.males {
+/*.males {
   align-items: flex-end;
-}
+}*/
 
 .males div {
   background-color: #5696BC;
@@ -45,4 +45,34 @@ body {
 
 .males div:hover, .females div:hover {
   opacity: 0.9;
+}
+
+
+.chart {
+  width: 600px;
+  height: 400px;
+  border: 1px solid black;
+}
+
+.chart rect {
+  ry: 1;
+  rx: 1;
+}
+
+.males rect {
+  fill: #5696BC;
+}
+
+.females rect {
+  fill: #d8a6b2;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
+
+.males rect:hover, .females rect:hover {
+  opacity: 0.8;
 }

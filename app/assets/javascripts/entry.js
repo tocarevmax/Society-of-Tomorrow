@@ -4,7 +4,7 @@ import {extractGender} from './util/selectors.js';
 import drawChart from './charts/agegroup';
 
 
-fetchPopulationByCountryYear('US', 1991)
+fetchPopulationByCountryYear('AF', 1991)
   .then((res) => {
     if ((res) && (res[1][2])) {
       // console.log(res[1][45]);
