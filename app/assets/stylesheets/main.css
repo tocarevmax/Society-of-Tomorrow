@@ -1,0 +1,44 @@
+div {
+  display: flex;
+}
+
+body {
+  display: flex;
+  padding-top: 20px;
+  justify-content: center;
+}
+
+.chart {
+  width: 400px;
+  height: 600px;
+}
+
+.males, .females {
+  flex-direction: column;
+  width: 200px;
+}
+
+.males {
+  align-items: flex-end;
+}
+
+.males div {
+  background-color: #5696BC;
+}
+
+.females div {
+  background-color: #E04836;
+}
+
+.males div, .females div {
+  font: 10px sans-serif;
+  text-align: right;
+  padding: 10px;
+  margin: 1px;
+  color: white;
+  border-radius: 1px;
+}
+
+.males div:hover, .females div:hover {
+  opacity: 0.9;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "JS-Project",
+  "version": "1.0.0",
+  "description": "### Background and Overview",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tocarevmax/Society-of-Tomorrow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tocarevmax/Society-of-Tomorrow/issues"
+  },
+  "homepage": "https://github.com/tocarevmax/Society-of-Tomorrow#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "d3": "^4.12.0"
+  }
+}
