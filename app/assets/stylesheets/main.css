@@ -24,14 +24,9 @@ body {
 
 .males div {
   background-color: #5696BC;
-  /*background-color: #0087db;*/
 }
 
 .females div {
-  /*background-color: #E04836;*/
-  /*background-color: #b97d4b;*/
-  /*background-color: #C4B8E7;*/
-  /*background-color: #f1b9c6;*/
   background-color: #d8a6b2;
   /*justify-content: flex-end;*/
   direction: rtl;
@@ -45,7 +40,7 @@ body {
   color: white;
   border-radius: 1px;
   align-items: center;
-  text-indent: 10px;
+  text-indent: 2px;
 }
 
 .males div:hover, .females div:hover {

@@ -89,30 +89,72 @@ const group85plus = (pojo) => {
   resPojo['TPOP85_'] = TPOP85_;
   resPojo['TPOP85_p'] = TPOP85_p;
 
-  delete resPojo['FPOP85_89'];
-  delete resPojo['FPOP90_94'];
-  delete resPojo['FPOP95_99'];
-  delete resPojo['FPOP100_'];
+  const toDelete = [
+    'FPOP85_89',
+    'FPOP90_94',
+    'FPOP95_99',
+    'FPOP100_',
 
-  delete resPojo['MPOP85_89'];
-  delete resPojo['MPOP90_94'];
-  delete resPojo['MPOP95_99'];
-  delete resPojo['MPOP100_'];
+    'MPOP85_89',
+    'MPOP90_94',
+    'MPOP95_99',
+    'MPOP100_',
 
-  delete resPojo['FPOP85_89p'];
-  delete resPojo['FPOP90_94p'];
-  delete resPojo['FPOP95_99p'];
-  delete resPojo['FPOP100_p'];
+    'FPOP85_89p',
+    'FPOP90_94p',
+    'FPOP95_99p',
+    'FPOP100_p',
 
-  delete resPojo['MPOP85_89p'];
-  delete resPojo['MPOP90_94p'];
-  delete resPojo['MPOP95_99p'];
-  delete resPojo['MPOP100_p'];
+    'MPOP85_89p',
+    'MPOP90_94p',
+    'MPOP95_99p',
+    'MPOP100_p',
+
+    'TPOP85_89',
+    'TPOP90_94',
+    'TPOP95_99',
+    'TPOP100_',
+
+    'TPOP85_89p',
+    'TPOP90_94p',
+    'TPOP95_99p',
+    'TPOP100_p'
+  ];
+
+
+  for (var i = 0; i < toDelete.length; i++) {
+    delete resPojo[`${toDelete[i]}`];
+  }
+  // delete resPojo['FPOP85_89'];
+  // delete resPojo['FPOP90_94'];
+  // delete resPojo['FPOP95_99'];
+  // delete resPojo['FPOP100_'];
+  //
+  // delete resPojo['MPOP85_89'];
+  // delete resPojo['MPOP90_94'];
+  // delete resPojo['MPOP95_99'];
+  // delete resPojo['MPOP100_'];
+  //
+  // delete resPojo['FPOP85_89p'];
+  // delete resPojo['FPOP90_94p'];
+  // delete resPojo['FPOP95_99p'];
+  // delete resPojo['FPOP100_p'];
+  //
+  // delete resPojo['MPOP85_89p'];
+  // delete resPojo['MPOP90_94p'];
+  // delete resPojo['MPOP95_99p'];
+  // delete resPojo['MPOP100_p'];
 
   return resPojo;
 };
 
 export default (arr) => {
+  // return calcPercent(
+  //     addTotalPopAge(
+  //       convertArrToPojo(arr)
+  //     )
+  // );
+
   return group85plus(
     calcPercent(
       addTotalPopAge(

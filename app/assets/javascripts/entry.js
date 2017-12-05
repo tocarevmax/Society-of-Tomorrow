@@ -4,15 +4,23 @@ import {extractGender} from './util/selectors.js';
 import drawChart from './charts/agegroup';
 
 
-fetchPopulationByCountryYear('CD', 2000)
+fetchPopulationByCountryYear('US', 1991)
   .then((res) => {
-    let parsed = parseData(res);
-    let males = extractGender(parsed, 'M');
-    let females = extractGender(parsed, 'F');
-    console.log(parsed);
-    console.log(males);
-    console.log(females);
+    if ((res) && (res[1][2])) {
+      // console.log(res[1][45]);
+      // console.log(res);
 
-    drawChart('males', males);
-    drawChart('females', females);
+      let parsed = parseData(res);
+      let males = extractGender(parsed, 'M');
+      let females = extractGender(parsed, 'F');
+      // console.log(parsed);
+      // console.log(males);
+      // console.log(females);
+
+      drawChart('males', males);
+      drawChart('females', females);
+    } else {
+      console.log('error fetching data');
+    }
+
   });
