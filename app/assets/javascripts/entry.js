@@ -1,14 +1,18 @@
-import * as d3 from 'd3';
-import * as scale from "d3-scale";
+import {fetchPopulationByCountryYear} from './util/census_api_util';
+import parseData from './util/parse_census_data';
+import {extractGender} from './util/selectors.js';
+import drawChart from './charts/agegroup';
 
-import {fetchPopulationByCountryYear} from './api_util/census_api_util';
-import parseData from './api_util/parse_census_data';
 
-
-window.d3 = d3;
-window.scale = scale;
-
-fetchPopulationByCountryYear('US', 2000)
+fetchPopulationByCountryYear('US', 2030)
   .then((res) => {
-    console.log(parseData(res));
+    let parsed = parseData(res);
+    let males = extractGender(parsed, 'M');
+    let females = extractGender(parsed, 'F');
+    console.log(parsed);
+    console.log(males);
+    console.log(females);
+
+    drawChart('males', males);
+    drawChart('females', females);
   });

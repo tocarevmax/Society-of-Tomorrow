@@ -28,15 +28,19 @@ body {
 
 .females div {
   background-color: #E04836;
+  /*justify-content: flex-end;*/
+  direction: rtl;
 }
 
 .males div, .females div {
   font: 10px sans-serif;
   text-align: right;
-  padding: 10px;
+  padding: 10px 1px;
   margin: 1px;
   color: white;
   border-radius: 1px;
+  align-items: center;
+  text-indent: 10px;
 }
 
 .males div:hover, .females div:hover {
