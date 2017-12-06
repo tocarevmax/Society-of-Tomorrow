@@ -49,8 +49,6 @@ body {
 
 
 .chart {
-  width: 600px;
-  height: 400px;
   border: 1px solid black;
 }
 
@@ -75,4 +73,8 @@ body {
 
 .males rect:hover, .females rect:hover {
   opacity: 0.8;
+}
+
+.axis text {
+  fill: black;
 }
