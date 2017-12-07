@@ -102,6 +102,14 @@ body {
   background: none repeat scroll 0 0 #ffffff;
   border: 1px solid black;
   padding: 5px;
-  text-align: center;
+  text-align: left;
   font-size: 12px;
+}
+
+.toolTip span {
+  display: block;
+}
+
+.toolTip span:first-of-type {
+  padding-bottom: 5px;
 }

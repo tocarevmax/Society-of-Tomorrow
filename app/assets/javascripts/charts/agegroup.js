@@ -1,9 +1,10 @@
 import * as d3 from 'd3';
 import * as scale from "d3-scale";
 
-window.d3 = d3;
-window.scale = scale;
 
+const numberWithCommas = (x) => {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
 
 var margin = {top: 20, right: 30, bottom: 30, left: 40},
     mainWidth = 700 - margin.left - margin.right,
@@ -116,7 +117,9 @@ const drawChart = (gender, data) => {
           .style("left", d3.event.pageX + 15 + "px")
           .style("top", d3.event.pageY + "px")
           .style("display", "inline-block")
-          .html((d.pct));
+          .html((
+            `<span>Percent: <strong>${d.pct}%</strong></span><span>Count: <strong>${numberWithCommas(d.num)}</strong></span>`
+          ));
     })
     .on("mouseout", function(d){ tooltip.style("display", "none");});
 
