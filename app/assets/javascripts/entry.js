@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// hello
 
 
 // fetchPopulationByCountryYear('MD', 1999)
