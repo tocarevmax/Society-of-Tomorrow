@@ -38,11 +38,11 @@ const clickCallback = (country, year) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   $('#US-2000').click(() => {
-    clickCallback('US',2000);
+    clickCallback('US',1999);
   });
 
   $('#US-2001').click(() => {
-    clickCallback('MD',2001);
+    clickCallback('US',2050);
   });
 });
 
