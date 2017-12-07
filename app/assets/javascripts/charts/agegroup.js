@@ -78,8 +78,13 @@ document.addEventListener("DOMContentLoaded", () => {
       .attr("class", "axis-labels")
       .attr("x", "230")
       .attr("y", `${margin.top + 390}`)
-
       .text("Percentage of total population");
+
+  mainChart.append("text")
+      .attr("class", "source")
+      .attr("x", "600")
+      .attr("y", `${margin.top + 390}`)
+      .text("Source: U.S. Census Bureau");
 });
 
 
@@ -108,12 +113,31 @@ const drawChart = (gender, data) => {
       .attr("width", (d) => x(d.pct))
       .attr("height", barHeight - 1);
 
-  bar.append("text")
-      .attr("x", (d) => x(d.pct) - 3)
-      .attr("y", barHeight / 2)
-      .attr("dy", ".35em")
-      .text((d) => d.pct);
 
+
+  // var chart = d3.select(`.${gender}`)
+  //   .attr("width", width)
+  //   .attr("height", barHeight * data.length);
+  //
+  // var bar = chart.selectAll("g")
+  //     .data(data)
+  //   .enter().append("g")
+  //     .attr("transform", (d, i) => (`translate(${offset(d)},${margin.top + i * barHeight})`));
+  //
+  // bar.append("rect")
+  //     .attr("width", (d) => x(d.pct))
+  //     .attr("height", barHeight - 1);
+
+
+
+  // bar2.append("rect")
+  //     .attr("width", (d) => x(d.pct))
+  //     .attr("height", barHeight - 1);
+  // bar.append("text")
+  //     .attr("x", (d) => x(d.pct) - 3)
+  //     .attr("y", barHeight / 2)
+  //     .attr("dy", ".35em")
+  //     .text((d) => d.pct);
 };
 
 
