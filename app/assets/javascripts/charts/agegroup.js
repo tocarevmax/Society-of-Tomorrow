@@ -7,7 +7,7 @@ window.scale = scale;
 
 var margin = {top: 20, right: 30, bottom: 30, left: 40},
     mainWidth = 700 - margin.left - margin.right,
-    mainHeight = 400 - margin.top - margin.bottom;
+    mainHeight = 450 - margin.top - margin.bottom;
 
 var width = (mainWidth / 2.5),
     barHeight = 20;
@@ -43,18 +43,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
   mainChart.append("g")
       .attr("class", "x axis")
-      .attr("transform", "translate(97,360)")
+      .attr("transform", `translate(97,${margin.top + 360})`)
       .call(generateXaxis(x.domain([12,0])));
 
   mainChart.append("g")
       .attr("class", "x axis")
-      .attr("transform", "translate(349,360)")
+      .attr("transform", `translate(349,${margin.top + 360})`)
       .call(generateXaxis(x.domain([0,12])));
 
   mainChart.append("g")
       .attr("class", "y axis")
-      .attr("transform", "translate(97,-10)")
+      .attr("transform", `translate(97,${margin.top-10})`)
       .call(yAxis);
+
+  mainChart.append("text")
+      .attr("class", "gender-labels")
+      .attr("x", "250")
+      .attr("y", `${margin.top}`)
+      .text("MALE");
+
+  mainChart.append("text")
+      .attr("class", "gender-labels")
+      .attr("x", "510")
+      .attr("y", `${margin.top}`)
+      .text("FEMALE");
+
+  mainChart.append("text")
+      .attr("class", "axis-labels")
+      .attr("x", "88")
+      .attr("y", `${margin.top- 1}`)
+      .text("Age Group");
+
+  mainChart.append("text")
+      .attr("class", "axis-labels")
+      .attr("x", "230")
+      .attr("y", `${margin.top + 390}`)
+
+      .text("Percentage of total population");
 });
 
 
@@ -77,7 +102,7 @@ const drawChart = (gender, data) => {
   var bar = chart.selectAll("g")
       .data(data)
     .enter().append("g")
-      .attr("transform", (d, i) => (`translate(${offset(d)},${i * barHeight})`));
+      .attr("transform", (d, i) => (`translate(${offset(d)},${margin.top + i * barHeight})`));
 
   bar.append("rect")
       .attr("width", (d) => x(d.pct))
@@ -89,28 +114,8 @@ const drawChart = (gender, data) => {
       .attr("dy", ".35em")
       .text((d) => d.pct);
 
-  // if (gender === 'males') {
-  //   chart.append("g")
-  //     .attr("class", "x axis")
-  //     .attr("transform", "translate(34,360)")
-  //     .call(xMAxis);
-  // } else {
-  //   chart.append("g")
-  //     .attr("class", "x axis")
-  //     .attr("transform", "translate(299,360)")
-  //     .call(xAxis);
-  // }
 };
 
 
-
-// const drawChart = (gender, data) => {
-//   d3.select(`.${gender}`)
-//     .selectAll('div')
-//       .data(data)
-//     .enter().append('div')
-//       .style('width', (d) => `${x(d.pct)}px`)
-//       .text((d) => d.pct);
-// };
 
 export default drawChart;

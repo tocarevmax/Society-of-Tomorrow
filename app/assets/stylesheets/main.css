@@ -6,51 +6,24 @@ body {
   display: flex;
   padding-top: 20px;
   justify-content: center;
+  font-family: sans-serif;
 }
 
-/*.chart {
-  width: 400px;
-  height: 600px;
-}*/
-
-/*.males, .females {
+.chart-wrapper {
   flex-direction: column;
-  width: 200px;
-}*/
-
-/*.males {
-  align-items: flex-end;
-}*/
-
-.males div {
-  background-color: #5696BC;
 }
 
-.females div {
-  background-color: #d8a6b2;
-  /*justify-content: flex-end;*/
-  direction: rtl;
-}
-
-.males div, .females div {
-  font: 10px sans-serif;
-  text-align: right;
-  padding: 5px 1px;
-  margin: 1px;
-  color: white;
-  border-radius: 1px;
-  align-items: center;
-  text-indent: 2px;
-}
-
-.males div:hover, .females div:hover {
-  opacity: 0.9;
+.country-header {
+  font-size: 28px;
+  font-weight: bold;
+  justify-content: center;
 }
 
 
 .chart {
   border: 1px solid black;
 }
+
 
 .chart rect {
   ry: 1;
@@ -66,7 +39,7 @@ body {
 }
 
 .chart text {
-  fill: white;
+  fill: black;
   font: 10px sans-serif;
   text-anchor: end;
 }
@@ -77,4 +50,15 @@ body {
 
 .axis text {
   fill: black;
+}
+
+.chart .gender-labels {
+  font: 14px sans-serif;
+  font-weight: 400;
+}
+
+.chart .header {
+  font: 26px sans-serif;
+  font-weight: 700;
+  text-anc
 }
