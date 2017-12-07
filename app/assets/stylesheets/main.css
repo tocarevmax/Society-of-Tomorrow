@@ -17,11 +17,12 @@ body {
   font-size: 28px;
   font-weight: bold;
   justify-content: center;
+  height: 32px;
 }
 
 
 .chart {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
 
@@ -63,12 +64,32 @@ body {
   text-anc
 }
 
+.chart-header {
+  padding-bottom: 30px;
+}
+
 .chart .source {
   fill: #b3b3b3;
 }
 
 
-.test-links {
-  flex-direction: column;
+.fetch-links {
+  flex-direction: row;
   cursor: pointer;
+  color: #6666b2;
+  width: 200px;
+  flex-wrap: wrap;
+  padding-left: 20px;
+}
+
+.fetch-links a {
+  display: flex;
+  width: auto;
+  padding-right: 5px;
+  line-height: 1;
+  height: 20px;
+}
+
+.fetch-links a:hover {
+  text-decoration: underline;
 }

@@ -1,52 +1,65 @@
 import {fetchPopulationByCountryYear} from './util/census_api_util';
-import parseData from './util/parse_census_data';
-import {extractGender} from './util/selectors.js';
+
 import drawChart from './charts/agegroup';
-import {addCountryName, addYear} from './charts/header';
+import {addCountryName, addYear, clickCallback, addLinks} from './charts/helpers';
 
-const renderChartAfterFetching = (res) => {
-  if ((res) && (res[1][2])) {
 
-    var year = res[1][45];
-    var country = res[1][0];
 
-    addCountryName([country]);
-    addYear([year]);
 
-    console.log(year);
-    console.log(country);
-    console.log(res);
+const arrayOfLinks = [];
 
-    let parsed = parseData(res);
-    let males = extractGender(parsed, 'M');
-    let females = extractGender(parsed, 'F');
-    console.log(parsed);
-    console.log(males);
-    console.log(females);
+for (let i = 1980; i <= 2050; i++) {
+  arrayOfLinks.push(i);
+}
 
-    drawChart('males', males);
-    drawChart('females', females);
-  } else {
-    console.log('error fetching data');
-  }
-};
 
-const clickCallback = (country, year) => {
-  return fetchPopulationByCountryYear(country, year)
-    .then(renderChartAfterFetching);
-};
 
 document.addEventListener("DOMContentLoaded", () => {
-  $('#US-2000').click(() => {
-    clickCallback('US',1999);
-  });
+  addLinks(arrayOfLinks);
 
-  $('#US-2001').click(() => {
-    clickCallback('US',2050);
-  });
+  for (let i = 0; i < arrayOfLinks.length; i++) {
+    $(`.${arrayOfLinks[i]}`).click(() => {
+      clickCallback('US', arrayOfLinks[i]);
+    });
+
+  }
+
+  // $('#US-2000').click(() => {
+  //   clickCallback('US',1980);
+  // });
+  //
+  // $('#US-2001').click(() => {
+  //   clickCallback('US',2050);
+  // });
 });
 
-// hello
+
+
+
+// fetchArraybyCountry('US');
+
+// window.resArray = resArray;
+
+
+
+
+
+// const innerTimeoutCallback = (obj) => () => {
+//   renderChart(obj);
+// };
+//
+// while (resArray.length <= 11) {
+//   setTimeout(() => {console.log("it's less than 10");}, 3000);
+//
+//   if (resArray.length === 11) {
+//     debugger;
+//     for (var i = 0; i < resArray.length; i++) {
+//       setTimeout(innerTimeoutCallback(resArray[i]),1000);
+//     }
+//     break;
+//   }
+// }
+
 
 
 // fetchPopulationByCountryYear('MD', 1999)
