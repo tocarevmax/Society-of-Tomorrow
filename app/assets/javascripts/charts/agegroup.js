@@ -34,7 +34,7 @@ const generateXaxis = (sc) => (
       .tickFormat(d => d + "%")
 );
 
-
+var tooltip;
 
 document.addEventListener("DOMContentLoaded", () => {
   var mainChart = d3.select('.chart')
@@ -85,6 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
       .attr("x", "600")
       .attr("y", `${margin.top + 390}`)
       .text("Source: U.S. Census Bureau");
+
+  tooltip = d3.select("body").append("div").attr("class", "toolTip");
 });
 
 
@@ -108,7 +110,15 @@ const drawChart = (gender, data) => {
       .data(data);
 
   var barEnter = bar.enter().append("g");
-  barEnter.append("rect");
+  barEnter.append("rect")
+    .on("mousemove", function(d){
+        tooltip
+          .style("left", d3.event.pageX + 15 + "px")
+          .style("top", d3.event.pageY + "px")
+          .style("display", "inline-block")
+          .html((d.pct));
+    })
+    .on("mouseout", function(d){ tooltip.style("display", "none");});
 
   bar.merge(barEnter)
     .transition()
