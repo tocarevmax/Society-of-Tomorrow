@@ -43,7 +43,7 @@ const calcPercent = (pojo) => {
     }
   }
 
-  console.log(resPojo);
+  // console.log(resPojo);
   return resPojo;
 };
 

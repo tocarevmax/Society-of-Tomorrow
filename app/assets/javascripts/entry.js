@@ -22,15 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
       clickCallback('US', arrayOfLinks[i]);
     });
 
+
   }
 
-  // $('#US-2000').click(() => {
-  //   clickCallback('US',1980);
-  // });
-  //
-  // $('#US-2001').click(() => {
-  //   clickCallback('US',2050);
-  // });
+    clickCallback('US', 2017);
+    clickCallback('US', 2018);
+
 });
 
 

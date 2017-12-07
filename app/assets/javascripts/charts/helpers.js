@@ -61,20 +61,20 @@ const renderChartAfterFetching = (res) => {
     addCountryName([country]);
     addYear([year]);
 
-    console.log(year);
-    console.log(country);
-    console.log(res);
+    // console.log(year);
+    // console.log(country);
+    // console.log(res);
 
     let parsed = parseData(res);
     let males = extractGender(parsed, 'M');
     let females = extractGender(parsed, 'F');
-    console.log(parsed);
-    console.log(males);
-    console.log(females);
+    // console.log(parsed);
+    // console.log(males);
+    // console.log(females);
 
     drawChart('males', males);
     drawChart('females', females);
   } else {
-    console.log('error fetching data');
+    // console.log('error fetching data');
   }
 };

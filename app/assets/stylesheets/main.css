@@ -5,8 +5,9 @@ div {
 body {
   display: flex;
   padding-top: 20px;
-  justify-content: center;
   font-family: sans-serif;
+  flex-direction: column;
+  align-items: center;
 }
 
 .chart-wrapper {
@@ -61,7 +62,6 @@ body {
 .chart .header {
   font: 26px sans-serif;
   font-weight: 700;
-  text-anc
 }
 
 .chart-header {
@@ -79,15 +79,14 @@ body {
   color: #6666b2;
   width: 200px;
   flex-wrap: wrap;
-  padding-left: 20px;
+  padding-left: 50px;
+  padding-right: 150px;
 }
 
 .fetch-links a {
   display: flex;
   width: auto;
   padding-right: 5px;
-  line-height: 1;
-  height: 20px;
 }
 
 .fetch-links a:hover {
@@ -112,4 +111,30 @@ body {
 
 .toolTip span:first-of-type {
   padding-bottom: 5px;
+}
+
+.project-name {
+  flex-direction: column;
+  color: #696969;
+  /*align-items: center;*/
+}
+
+.top {
+  width: 100%;
+}
+
+.project-name h1 {
+  margin: 0;
+  margin-bottom: 5px;
+
+}
+.project-name h3 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.chart-and-links {
+  width: 100%;
+  padding-top: 30px;
 }
