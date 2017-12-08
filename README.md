@@ -26,7 +26,7 @@ Society of Tomorrow incorporates the following features:
 </p>
 
 
-###
+#### Tooltip
 
 <p align="center">
 <img width="300px" height="auto" src="https://raw.githubusercontent.com/tocarevmax/Society-of-Tomorrow/master/docs/tooltip.png" />
