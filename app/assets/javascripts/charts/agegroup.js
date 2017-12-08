@@ -82,6 +82,11 @@ document.addEventListener("DOMContentLoaded", () => {
       .text("Percentage of total population");
 
   mainChart.append("text")
+      .attr("class", "tpop")
+      .attr("x", "310")
+      .attr("y", `${margin.top + 390}`);
+
+  mainChart.append("text")
       .attr("class", "source")
       .attr("x", "600")
       .attr("y", `${margin.top + 390}`)
@@ -102,6 +107,11 @@ const drawChart = (gender, data) => {
       return (349.5 - x(d.pct));
     }
   };
+
+  d3.select('.tpop')
+    .text(`(${numberWithCommas(data[0].tpop)})`)
+    .style('font-weight', 'bold');
+
 
   var chart = d3.select(`.${gender}`)
     .attr("width", width)

@@ -34,6 +34,7 @@ const arrayOfCountries = [
   {country: 'United Kingdom', code: 'UK'},
   {country: 'Greece', code: 'GR'},
   {country: 'Germany', code: 'GM'},
+  {country: 'India', code: 'IN'},
   {country: 'Moldova', code: 'MD'},
 ];
 

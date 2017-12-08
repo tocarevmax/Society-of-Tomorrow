@@ -30,6 +30,8 @@ export const extractGender = (pojo, mf) => {
 
         resArr[idx]['num'] = pojo[keys[i]];
 
+        resArr[idx]['tpop'] = pojo['POP'];
+
         let tpop = `TPOP${keys[i].slice(4)}`;
         resArr[idx]['numBoth'] = pojo[tpop];
         resArr[idx]['pctBoth'] = pojo[`${tpop}p`];
@@ -39,6 +41,5 @@ export const extractGender = (pojo, mf) => {
       }
     }
   }
-
   return resArr;
 };
