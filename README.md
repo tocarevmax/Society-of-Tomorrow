@@ -22,7 +22,7 @@ Society of Tomorrow incorporates the following features:
 
 
 <p align="center">
-<img width="100%" height="100%" src="https://github.com/tocarevmax/Society-of-Tomorrow/blob/master/docs/animation.gif" />
+<img width="80%" height="80%" src="https://github.com/tocarevmax/Society-of-Tomorrow/blob/master/docs/animation.gif" />
 </p>
 
 
