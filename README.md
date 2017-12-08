@@ -18,10 +18,20 @@ Society of Tomorrow incorporates the following features:
 * Tooltip appearing when hovering over slice of chart that shows numbers behind the calculation.
 
 
+###
+
 
 <p align="center">
 <img width="100%" height="100%" src="https://github.com/tocarevmax/Society-of-Tomorrow/blob/master/docs/animation.gif" />
 </p>
+
+
+###
+
+<p align="center">
+<img width="300px" height="auto" src="https://raw.githubusercontent.com/tocarevmax/Society-of-Tomorrow/master/docs/tooltip.png" />
+</p>
+
 
 ### Architecture and Technologies
 
