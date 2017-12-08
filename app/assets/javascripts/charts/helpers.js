@@ -43,8 +43,10 @@ export const addLinks = (data) => {
               .append("a");
 
   div.merge(enterDiv)
-      .attr("class", d => d)
-      .text(d => d);
+      .attr("class", d => {
+        return (d.country.split(" ").join("-"));
+      })
+      .text(d => d.country);
 };
 
 export const clickCallback = (country, year) => {

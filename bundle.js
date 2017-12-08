@@ -5166,12 +5166,7 @@ Object.defineProperty(exports, "__esModule", {
 var extractGender = exports.extractGender = function extractGender(pojo, mf) {
   var keys = Object.keys(pojo);
   var resArr = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}];
-  var indecing = [
-  // `${mf}POP100_`,
-  // `${mf}POP95_99`,
-  // `${mf}POP90_94`,
-  // `${mf}POP85_89`,
-  mf + 'POP85_', mf + 'POP80_84', mf + 'POP75_79', mf + 'POP70_74', mf + 'POP65_69', mf + 'POP60_64', mf + 'POP55_59', mf + 'POP50_54', mf + 'POP45_49', mf + 'POP40_44', mf + 'POP35_39', mf + 'POP30_34', mf + 'POP25_29', mf + 'POP20_24', mf + 'POP15_19', mf + 'POP10_14', mf + 'POP5_9', mf + 'POP0_4'];
+  var indecing = [mf + 'POP85_', mf + 'POP80_84', mf + 'POP75_79', mf + 'POP70_74', mf + 'POP65_69', mf + 'POP60_64', mf + 'POP55_59', mf + 'POP50_54', mf + 'POP45_49', mf + 'POP40_44', mf + 'POP35_39', mf + 'POP30_34', mf + 'POP25_29', mf + 'POP20_24', mf + 'POP15_19', mf + 'POP10_14', mf + 'POP5_9', mf + 'POP0_4'];
   for (var i = 0; i < keys.length; i++) {
     if (keys[i].slice(0, 4) === mf + 'POP') {
       if (keys[i][keys[i].length - 1] !== 'p') {
@@ -10324,52 +10319,30 @@ var _helpers = __webpack_require__(467);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var arrayOfLinks = [];
+// const arrayOfLinks = [];
+//
+// for (let i = 1980; i <= 2050; i++) {
+//   arrayOfLinks.push(i);
+// }
 
-for (var i = 1980; i <= 2050; i++) {
-  arrayOfLinks.push(i);
-}
+var arrayOfCountries = [{ country: 'United States', code: 'US' }, { country: 'United Arab Emirates', code: 'AE' }, { country: 'Canada', code: 'CA' }, { country: 'Mexico', code: 'MX' }, { country: 'China', code: 'CH' }, { country: 'Afghanistan', code: 'AF' }, { country: 'Brazil', code: 'BR' }, { country: 'Russia', code: 'RS' }, { country: 'Australia', code: 'AU' }, { country: 'Argentina', code: 'US' }, { country: 'Congo', code: 'CG' }, { country: 'Indonesia', code: 'ID' }, { country: 'Saudi Arabia', code: 'SA' }, { country: 'Colombia', code: 'CO' }, { country: 'Nigeria', code: 'NI' }, { country: 'Turkey', code: 'TU' }, { country: 'Chile', code: 'CI' }, { country: 'France', code: 'FR' }, { country: 'United Kingdom', code: 'UK' }, { country: 'Greece', code: 'GR' }, { country: 'Germany', code: 'GM' }];
 
 document.addEventListener("DOMContentLoaded", function () {
-  (0, _helpers.addLinks)(arrayOfLinks);
+  (0, _helpers.addLinks)(arrayOfCountries);
 
-  var _loop = function _loop(_i) {
-    $('.' + arrayOfLinks[_i]).click(function () {
-      (0, _helpers.clickCallback)('US', arrayOfLinks[_i]);
+  var _loop = function _loop(i) {
+    $('.' + arrayOfCountries[i].country.split(" ").join("-")).click(function () {
+      (0, _helpers.clickCallback)(arrayOfCountries[i].code, 2018);
     });
   };
 
-  for (var _i = 0; _i < arrayOfLinks.length; _i++) {
-    _loop(_i);
+  for (var i = 0; i < arrayOfCountries.length; i++) {
+    _loop(i);
   }
 
-  (0, _helpers.clickCallback)('US', 2017);
+  (0, _helpers.clickCallback)('US', 2018);
   (0, _helpers.clickCallback)('US', 2018);
 });
-
-// fetchArraybyCountry('US');
-
-// window.resArray = resArray;
-
-
-// const innerTimeoutCallback = (obj) => () => {
-//   renderChart(obj);
-// };
-//
-// while (resArray.length <= 11) {
-//   setTimeout(() => {console.log("it's less than 10");}, 3000);
-//
-//   if (resArray.length === 11) {
-//     debugger;
-//     for (var i = 0; i < resArray.length; i++) {
-//       setTimeout(innerTimeoutCallback(resArray[i]),1000);
-//     }
-//     break;
-//   }
-// }
-
-
-// fetchPopulationByCountryYear('MD', 1999)
 
 /***/ }),
 /* 178 */
@@ -23427,9 +23400,9 @@ var addLinks = exports.addLinks = function addLinks(data) {
   var enterDiv = div.enter().append("a");
 
   div.merge(enterDiv).attr("class", function (d) {
-    return d;
+    return d.country.split(" ").join("-");
   }).text(function (d) {
-    return d;
+    return d.country;
   });
 };
 

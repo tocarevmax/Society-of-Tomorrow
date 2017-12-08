@@ -3,10 +3,6 @@ export const extractGender = (pojo, mf) => {
   const resArr = [
     {},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}];
   const indecing = [
-    // `${mf}POP100_`,
-    // `${mf}POP95_99`,
-    // `${mf}POP90_94`,
-    // `${mf}POP85_89`,
     `${mf}POP85_`,
     `${mf}POP80_84`,
     `${mf}POP75_79`,
