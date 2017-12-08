@@ -15,7 +15,7 @@ Society of Tomorrow incorporates the following features:
 * Parsing of data received from the API and expanded data points through mathematical formulas for ratio calculations.
 * Mapping, scaling and rendering of a chart using D3.js library with an ability to re-render when new data is passed.
 * Smooth transition on re-rendering.
-* Tooltip appearing when hover over slice of chart that shows numbers behind the calculation.
+* Tooltip appearing when hovering over slice of chart that shows numbers behind the calculation.
 
 ### Demo
 
