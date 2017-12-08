@@ -5215,7 +5215,7 @@ var numberWithCommas = function numberWithCommas(x) {
 
 var margin = { top: 20, right: 30, bottom: 30, left: 40 },
     mainWidth = 700 - margin.left - margin.right,
-    mainHeight = 450 - margin.top - margin.bottom;
+    mainHeight = 420 - margin.top - margin.bottom;
 
 var width = mainWidth / 2.5,
     barHeight = 20;
@@ -5276,7 +5276,7 @@ var drawChart = function drawChart(gender, data) {
 
   var barEnter = bar.enter().append("g");
   barEnter.append("rect").on("mousemove", function (d) {
-    tooltip.style("left", d3.event.pageX + 15 + "px").style("top", d3.event.pageY + "px").style("display", "inline-block").html("<span>Percent: <strong>" + d.pct + "%</strong></span><span>Count: <strong>" + numberWithCommas(d.num) + "</strong></span>");
+    tooltip.style("left", d3.event.pageX + 15 + "px").style("top", d3.event.pageY + "px").style("display", "inline-block").html("<span>Age: <strong>" + d.age.split("_").join("-") + "</strong></span>" + ("<span>Percent: <strong>" + d.pct + "%</strong></span>") + ("<span>Count: <strong>" + numberWithCommas(d.num) + "</strong></span>"));
   }).on("mouseout", function (d) {
     tooltip.style("display", "none");
   });
@@ -10325,7 +10325,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //   arrayOfLinks.push(i);
 // }
 
-var arrayOfCountries = [{ country: 'United States', code: 'US' }, { country: 'United Arab Emirates', code: 'AE' }, { country: 'Canada', code: 'CA' }, { country: 'Mexico', code: 'MX' }, { country: 'China', code: 'CH' }, { country: 'Afghanistan', code: 'AF' }, { country: 'Brazil', code: 'BR' }, { country: 'Russia', code: 'RS' }, { country: 'Australia', code: 'AU' }, { country: 'Argentina', code: 'US' }, { country: 'Congo', code: 'CG' }, { country: 'Indonesia', code: 'ID' }, { country: 'Saudi Arabia', code: 'SA' }, { country: 'Colombia', code: 'CO' }, { country: 'Nigeria', code: 'NI' }, { country: 'Turkey', code: 'TU' }, { country: 'Chile', code: 'CI' }, { country: 'France', code: 'FR' }, { country: 'United Kingdom', code: 'UK' }, { country: 'Greece', code: 'GR' }, { country: 'Germany', code: 'GM' }];
+var arrayOfCountries = [{ country: 'United States', code: 'US' }, { country: 'United Arab Emirates', code: 'AE' }, { country: 'Canada', code: 'CA' }, { country: 'Mexico', code: 'MX' }, { country: 'China', code: 'CH' }, { country: 'Afghanistan', code: 'AF' }, { country: 'Brazil', code: 'BR' }, { country: 'Russia', code: 'RS' }, { country: 'Australia', code: 'AS' }, { country: 'Argentina', code: 'US' }, { country: 'Congo', code: 'CG' }, { country: 'Indonesia', code: 'ID' }, { country: 'Saudi Arabia', code: 'SA' }, { country: 'Colombia', code: 'CO' }, { country: 'Nigeria', code: 'NI' }, { country: 'Turkey', code: 'TU' }, { country: 'Chile', code: 'CI' }, { country: 'France', code: 'FR' }, { country: 'United Kingdom', code: 'UK' }, { country: 'Greece', code: 'GR' }, { country: 'Germany', code: 'GM' }, { country: 'Moldova', code: 'MD' }];
 
 document.addEventListener("DOMContentLoaded", function () {
   (0, _helpers.addLinks)(arrayOfCountries);

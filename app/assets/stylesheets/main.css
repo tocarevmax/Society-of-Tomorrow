@@ -24,7 +24,6 @@ body {
 
 .chart {
   /*border: 1px solid black;*/
-  /*border: 1px solid black;*/
 }
 
 
@@ -75,19 +74,19 @@ body {
 
 
 .fetch-links {
-  flex-direction: row;
+  flex-direction: column;
   cursor: pointer;
   color: #6666b2;
   width: 200px;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   padding-left: 50px;
   padding-right: 150px;
 }
 
 .fetch-links a {
   display: flex;
-  width: auto;
-  padding-right: 5px;
+  width: 200px;
+  padding-bottom: 5px;
 }
 
 .fetch-links a:hover {
@@ -97,7 +96,7 @@ body {
 .toolTip {
   position: absolute;
   display: none;
-  min-width: 80px;
+  min-width: 100px;
   height: auto;
   background: none repeat scroll 0 0 #ffffff;
   border: 1px solid black;
@@ -107,11 +106,13 @@ body {
 }
 
 .toolTip span {
-  display: block;
+  display: flex;
+  padding-bottom: 3px;
+  justify-content: space-between;
 }
 
 .toolTip span:first-of-type {
-  padding-bottom: 5px;
+  /*padding-bottom: 5px;*/
 }
 
 .project-name {

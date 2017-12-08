@@ -8,7 +8,7 @@ const numberWithCommas = (x) => {
 
 var margin = {top: 20, right: 30, bottom: 30, left: 40},
     mainWidth = 700 - margin.left - margin.right,
-    mainHeight = 450 - margin.top - margin.bottom;
+    mainHeight = 420 - margin.top - margin.bottom;
 
 var width = (mainWidth / 2.5),
     barHeight = 20;
@@ -118,7 +118,9 @@ const drawChart = (gender, data) => {
           .style("top", d3.event.pageY + "px")
           .style("display", "inline-block")
           .html((
-            `<span>Percent: <strong>${d.pct}%</strong></span><span>Count: <strong>${numberWithCommas(d.num)}</strong></span>`
+            `<span>Age: <strong>${d.age.split("_").join("-")}</strong></span>` +
+            `<span>Percent: <strong>${d.pct}%</strong></span>` +
+            `<span>Count: <strong>${numberWithCommas(d.num)}</strong></span>`
           ));
     })
     .on("mouseout", function(d){ tooltip.style("display", "none");});

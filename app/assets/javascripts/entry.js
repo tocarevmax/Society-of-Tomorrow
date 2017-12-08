@@ -21,7 +21,7 @@ const arrayOfCountries = [
   {country: 'Afghanistan', code: 'AF'},
   {country: 'Brazil', code: 'BR'},
   {country: 'Russia', code: 'RS'},
-  {country: 'Australia', code: 'AU'},
+  {country: 'Australia', code: 'AS'},
   {country: 'Argentina', code: 'US'},
   {country: 'Congo', code: 'CG'},
   {country: 'Indonesia', code: 'ID'},
@@ -34,6 +34,7 @@ const arrayOfCountries = [
   {country: 'United Kingdom', code: 'UK'},
   {country: 'Greece', code: 'GR'},
   {country: 'Germany', code: 'GM'},
+  {country: 'Moldova', code: 'MD'},
 ];
 
 
