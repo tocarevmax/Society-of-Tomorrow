@@ -22,7 +22,7 @@ const arrayOfCountries = [
   {country: 'Brazil', code: 'BR'},
   {country: 'Russia', code: 'RS'},
   {country: 'Australia', code: 'AS'},
-  {country: 'Argentina', code: 'US'},
+  {country: 'Argentina', code: 'AR'},
   {country: 'Congo', code: 'CG'},
   {country: 'Indonesia', code: 'ID'},
   {country: 'Saudi Arabia', code: 'SA'},
