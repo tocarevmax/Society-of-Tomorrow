@@ -85,7 +85,7 @@ body {
 
 .fetch-links a {
   display: flex;
-  width: 200px;
+  width: fit-content;
   padding-bottom: 5px;
 }
 
@@ -118,11 +118,13 @@ body {
 .project-name {
   flex-direction: column;
   color: #696969;
+  padding-left: 30px;
   /*align-items: center;*/
 }
 
 .top {
   width: 100%;
+  justify-content: space-between;
 }
 
 .project-name h1 {
@@ -139,4 +141,14 @@ body {
 .chart-and-links {
   width: 100%;
   padding-top: 30px;
+}
+
+.icons {
+  padding-right: 30px;
+}
+
+.icons img {
+  height: 25px;
+  width: 25px;
+  padding-left: 10px;
 }
